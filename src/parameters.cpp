@@ -22,6 +22,10 @@ Parameters::Parameters(const std::string& config_file) {
       continue;
     }
 
+    if (line.find("#")==0) {
+      continue;
+    }
+
     std::stringstream ss(line);
     std::string key;
     ss >> key;
